@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1) 
+cmake_minimum_required(VERSION 3.1...3.5) 
 project(chameleon)
 
 # Set c++11
@@ -94,7 +94,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC ext/freetype/include)
 
 # Find OpenGL
 find_package(OpenGL REQUIRED)
-find_package(freetype REQUIRED)
+# find_package(freetype REQUIRED)
 
 if (OPENGL_FOUND)
    target_include_directories(${PROJECT_NAME} PUBLIC ${OPENGL_INCLUDE_DIR})
